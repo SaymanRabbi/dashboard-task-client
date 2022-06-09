@@ -8,6 +8,8 @@ import { useQuery } from "react-query";
 import AddUser from "./Components/AddUser/AddUser";
 import { useEffect, useState } from "react";
 import DesktopView from "./Components/DesktopView/DesktopView";
+import 'aos/dist/aos.css';
+import Dashboard from "./Components/Dashboard/Dashboard";
 function App() {
   // function useWindowSize() {
   // Initialize state with undefined width/height so server and client renders match
@@ -47,6 +49,7 @@ function App() {
         {
           windowSize.width <= 800 ? <Route path='/' element={<Users data={data}></Users>}></Route> : <Route path='/' element={<DesktopView data={data}></DesktopView>}></Route>
         }
+        <Route path='dashboard' element={<Dashboard dashboarddata={data}></Dashboard>}></Route>
         <Route path='/update/:id' element={<Update refetch={refetch}></Update>}></Route>
         <Route path='/aduser' element={<AddUser refetch={refetch}></AddUser>}></Route>
       </Routes>

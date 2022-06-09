@@ -5,7 +5,7 @@ const DesktopView = ({ data }) => {
     return (
         <div>
             <h1 className='text-3xl font-bold text-center my-10'>Hello ReqRes users!</h1>
-            <div className='grid md:grid-cols-4 gap-10'>
+            <div className='grid md:grid-cols-4 gap-10 px-3'>
                 {
                     data.map(userData => <SingelDesktopView key={userData._id} userData={userData}></SingelDesktopView>)
                 }

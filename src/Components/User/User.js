@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
+import AOS from 'aos';
 const User = ({ userData }) => {
+    useEffect(() => {
+        AOS.init();
+    }, [])
     const { avatar, email, first_name, last_name, _id } = userData
     return (
-        <div className="card max-w-lg bg-base-100 shadow-xl mx-auto">
+        <div data-aos="fade-up" className="card max-w-lg bg-base-100 shadow-xl mx-auto">
             <figure><img src={avatar} className=' w-28 h-28' alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{first_name + last_name}</h2>
