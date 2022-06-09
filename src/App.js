@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import DesktopView from "./Components/DesktopView/DesktopView";
 import 'aos/dist/aos.css';
 import Dashboard from "./Components/Dashboard/Dashboard";
+
 function App() {
   // function useWindowSize() {
   // Initialize state with undefined width/height so server and client renders match

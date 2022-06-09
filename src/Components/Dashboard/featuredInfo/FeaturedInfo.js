@@ -1,9 +1,9 @@
 import "./featuredInfo.css";
 import { ArrowDownward, ArrowUpward } from "@material-ui/icons";
 
-export default function FeaturedInfo() {
+const FeaturedInfo = () => {
   return (
-    <div className="featured">
+    <div className="featured grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
       <div className="featuredItem">
         <span className="featuredTitle">Revanue</span>
         <div className="featuredMoneyContainer">
@@ -36,4 +36,6 @@ export default function FeaturedInfo() {
       </div>
     </div>
   );
-}
+};
+
+export default FeaturedInfo;
